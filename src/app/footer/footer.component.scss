@@ -4,7 +4,6 @@
   width: 100%;
   background: #4499D9;
   min-height: 100px;
-  padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +43,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
   flex-wrap: wrap;
   .menu__item {
     list-style: none;
@@ -63,4 +61,14 @@
         }
     }  
   }    
+}
+
+@media(max-width:800px){
+  .menu{
+    .menu__item {
+      .menu__link {
+          font-size: 1.04em;
+      }  
+    }    
+  }
 }
