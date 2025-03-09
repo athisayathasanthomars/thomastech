@@ -44,22 +44,22 @@
 
                 <div class="contact mt-2 row">
                     <div class="col-12 col-lg-12">       
-                        <form class="contactform" action="">
+                        <form class="contactform"  [formGroup]="customer"   (ngSubmit)="GetDetails()">
                             <div class="row ms-2 mt-2 me-2 mb-2 g-4">                    
                                 <div class="col-6">
-                                    <input type="text" class="form-control p-2" placeholder="First Name*">
+                                    <input type="text" class="form-control p-2" name="firstname"  formControlName="firstname" placeholder="First Name*">
                                 </div>
                                 <div class="col-6">
-                                    <input type="text" class="form-control p-2" placeholder="Last Name*">
+                                    <input type="text" class="form-control p-2" name="lastname" formControlName="lastname" placeholder="Last Name*">
                                 </div>
                                 <div class="col-12">
-                                    <input class="form-control p-2" type="text" placeholder="Email*">
+                                    <input class="form-control p-2" type="text" name="email" formControlName="email" placeholder="Email*">
                                 </div>
                                 <div class="col-12">
-                                    <input class="form-control p-2" type="text" placeholder="Phone Number*">
+                                    <input class="form-control p-2" type="text" name="phoneno" formControlName="phoneno" placeholder="Phone Number*">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control p-2" rows="4" placeholder="Your Message*"></textarea>
+                                    <textarea class="form-control p-2" rows="4" name="message" formControlName="message" placeholder="Your Message*"></textarea>
                                 </div>
                                 <div class="col-12 text-center mt-2">
                                     <button class="sendmsg btn px-4 py-2" type="submit">Send Message</button>
